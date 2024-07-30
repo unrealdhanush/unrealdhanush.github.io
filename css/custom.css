@@ -701,47 +701,35 @@ header .navbar.sticky-header{
 	margin-bottom: 30px;
 }
 
-.single-portfolio-overlay{
+.single-portfolio-overlay {
 	position: absolute;
 	top: 10px;
 	left: 10px;
 	right: 10px;
 	bottom: 10px;
-	background: rgba(0,0,0,0);
+	background: rgba(0, 0, 0, 0.426);
 	padding: 20px;
-	transition: all 0.6s;
 	border-radius: 20px;
 }
 
-.single-portfolio-overlay h2{
+.single-portfolio-overlay h2, .single-portfolio-overlay h3 {
+	opacity: 1;
+	transition: none;
+}
+
+.single-portfolio-overlay h2 {
 	color: #fff;
 	font-size: 22px;
 	font-weight: 500;
-	margin-top: 20px;
-	opacity: 0;
-	transition: all 0.8s;
-}
-
-.single-portfolio-overlay h3{
-	font-weight: 400;
-	font-size: 16px;
-	color: #ff5d56;
-	opacity: 0;
-	transition: all 0.8s;
-}
-
-.single-portfolio:hover .single-portfolio-overlay{
-	background: rgba(0,0,0,0.8);
-}
-
-.single-portfolio:hover .single-portfolio-overlay h2{
-	opacity: 1;
 	margin-top: 0;
 }
 
-.single-portfolio:hover .single-portfolio-overlay h3{
-	opacity: 1;
+.single-portfolio-overlay h3 {
+	font-weight: 400;
+	font-size: 16px;
+	color: #ff5d56;
 }
+
 
 .mfp-content{
 	background: #222;
