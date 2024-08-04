@@ -1294,6 +1294,7 @@ header .navbar.sticky-header{
 
 .brand-slide img{
 	opacity: 0.4;
+	transform: none !important;
 	transition: all 0.4s;
 }
 
