@@ -572,6 +572,12 @@ header .navbar.sticky-header{
 	color: #fff;
 	font-weight: 400;
 	font-size: 20px;
+}
+
+.experience-single h6{
+	color: #a4a4a4;
+	font-weight: 400;
+	font-size: 14px;
 	margin-bottom: 20px;
 }
 
