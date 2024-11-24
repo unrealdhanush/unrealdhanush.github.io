@@ -70,31 +70,39 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     };
 
+    function getLegendFontSize() {
+      const width = window.innerWidth;
+      if (width < 768) {
+        return 12;
+      } else if (width < 992) {
+        return 14;
+      } else {
+        return 16;
+      }
+    }
+
+    function isSmallScreen() {
+      return window.innerWidth < 768;
+    }
+
     const chartOptions = {
       responsive: true,
+      maintainAspectRatio: true, // Changed to true to maintain aspect ratio
       animation: {
         animateRotate: true,
         duration: 2500,
       },
       plugins: {
         legend: {
+          display: !isSmallScreen(), // Hide legend on small screens
           position: 'bottom',
           labels: {
             color: '#707070',
             font: {
-              size: 14,
+              size: getLegendFontSize(),
               family: 'Roboto'
             }
           }
-        },
-        maintainAspectRatio: false,
-        layout: {
-            padding: {
-            left: 0,
-            right: 0,
-            top: 0,
-            bottom: 0
-            }
         },
         tooltip: {
           backgroundColor: '#ecf0f1',
@@ -117,9 +125,11 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     };
 
+    let chartInstances = []; // To store chart instances
+
     function createChart(chartId, chartType, data) {
       const ctx = document.getElementById(chartId).getContext('2d');
-      return new Chart(ctx, {
+      const chartInstance = new Chart(ctx, {
         type: chartType,
         data: {
           labels: data.labels,
@@ -133,6 +143,8 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         options: chartOptions,
       });
+      chartInstances.push(chartInstance);
+      return chartInstance;
     }
 
     function animateCharts() {
@@ -159,6 +171,30 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     animateCharts();
-  
+
+    // Update legend display and font size on window resize
+    window.addEventListener('resize', () => {
+      const newFontSize = getLegendFontSize();
+      chartInstances.forEach(instance => {
+        if (instance.config.options.plugins.legend) {
+          instance.config.options.plugins.legend.display = !isSmallScreen();
+          instance.config.options.plugins.legend.labels.font.size = newFontSize;
+          instance.update();
+        }
+      });
+    });
+
+    // Legend Toggle Functionality
+    const legendButtons = document.querySelectorAll('.legend-btn');
+
+    legendButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const legendContainer = button.nextElementSibling;
+            if (legendContainer) {
+                legendContainer.classList.toggle('show');
+                // Removed modal-open class toggling
+            }
+        });
+    });
+
 });
-  
