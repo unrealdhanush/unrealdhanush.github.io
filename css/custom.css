@@ -11,8 +11,8 @@
 body{
 	font-size: 16px;
 	font-family: 'Roboto', sans-serif;
-	background: #111;
-	color: #707070;
+	background: #000000;
+	color: #afafaf;
 }
 
 h1,
@@ -55,7 +55,7 @@ a:focus{
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background: #111;
+	background: #000000;
 	z-index: 9999;
 	text-align: center;
 }
@@ -84,7 +84,7 @@ a:focus{
     background: #ff5d56;
     -webkit-transform: translateY(0) rotate(45deg) scale(0);
     transform: translateY(0) rotate(45deg) scale(0);
-    -webkit-animation: diamonds 1500ms linear infinite;
+    -webkit-animation: diamonds 2000ms linear infinite;
     animation: diamonds 1500ms linear infinite;
 }
 
@@ -106,6 +106,15 @@ a:focus{
 .preloader .diamond:nth-child(4) {
     -webkit-animation-delay: -4000ms;
     animation-delay: -4000ms;
+}
+
+.cd-headline .cd-words-wrapper {
+    white-space: nowrap;
+    text-align: center;
+    font-size: calc(16px + 2vw);
+    max-width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
 @-webkit-keyframes diamonds {
@@ -163,11 +172,26 @@ a:focus{
 /************************************/
 
 
-header .navbar{
+header .navbar {
 	padding: 0;
-	background: rgba(0,0,0,0.4);
+	background: rgba(0, 0, 0, 0.95);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	z-index: 40;
-	transition: all 0.3s;
+	position: fixed; 
+	top: 0;
+	left: 0;
+	width: 100%;
+	opacity: 0; 
+	transform: translateY(-100%); 
+	animation: slideDown 0.9s ease-out forwards; 
+}
+
+header .navbar.sticky-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0,0,0,0.9);
 }
 
 .navbar-brand h1{
@@ -190,7 +214,7 @@ header .navbar-collapse.collapse{
 
 .navbar .navbar-nav .nav-item{
 	padding: 40px 6px 36px;
-	transition: all 0.3s;
+	transition: all 0.2s;
 }
 
 .navbar .navbar-nav .nav-link{
@@ -201,7 +225,6 @@ header .navbar-collapse.collapse{
 	border-radius: 4px;
 	text-transform: uppercase;
 	letter-spacing: 0.04em;
-	transition: all 0.3s;
 }
 
 .navbar .navbar-nav .nav-link.active{
@@ -281,6 +304,10 @@ header .navbar.sticky-header{
 /************************************/
 
 .banner{
+	height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 	position: relative;
     top: 0px;
     left: 0;
@@ -291,12 +318,13 @@ header .navbar.sticky-header{
 }
 
 .banner-content h2{
-	font-size: 22px;
+	font-size: 3rem;
 	font-weight: 300;
 	color: #fff;
 	line-height: 2.3em;
 	margin-bottom: 1.5em;
 	letter-spacing: 0.04em;
+	text-align:center
 }
 
 .banner-content h2 span.before-heading{
@@ -312,12 +340,13 @@ header .navbar.sticky-header{
 
 .banner-content p{
 	color: #707070;
-	font-size: 20px;
+	font-size: 1.5rem;
 	font-weight: 300;
 	margin-bottom: 1.5em;
 }
 
 .btn-download{
+	font-size: 1.2rem;
 	display: inline-block;
 	border: 2px solid #fff;
 	padding: 14px 30px;
@@ -333,7 +362,7 @@ header .navbar.sticky-header{
 }
 
 /**************************************/
-/*****     About us Section css    ****/
+/*****     About Me Section css    ****/
 /**************************************/
 
 .about-us{
@@ -452,20 +481,20 @@ header .navbar.sticky-header{
 }
 
 /**************************************/
-/*****     Services Section css    ****/
+/*****     Specializations Section css    ****/
 /**************************************/
 
 .services{
 	padding: 100px 0 70px;
-	background: #151515;
+	background: #000000;
 	position: relative;
 }
 
 .service-single{
-	background: #222;
+	background: #000000;
 	padding: 40px 30px;
 	text-align: center;
-	border: 1px solid #333;
+	border: 1px solid #000000;
 	margin-bottom: 30px;
 	position: relative;
 }
@@ -546,7 +575,7 @@ header .navbar.sticky-header{
 }
 
 .experience-single{
-	background: #222;
+	background: #171717;
 	padding: 40px 30px;
 	margin-top: 30px;
 	position: relative;
@@ -557,7 +586,7 @@ header .navbar.sticky-header{
 	display: block;
 	width: 0;
 	height: 0;
-	border-bottom: 30px solid #222;
+	border-bottom: 30px solid #171717;
 	border-right: 30px solid transparent;
 	position: absolute;
 	top: -30px;
@@ -661,11 +690,96 @@ header .navbar.sticky-header{
 }
 
 /***************************************/
+/*****     Skills Section css    ****/
+/***************************************/
+
+.my-skills{
+	padding: 70px 0 90px;
+	text-align: center;
+}
+
+@media (max-width: 991px) {
+	.my-skills .col-md-4 {
+	  flex: 0 0 50%;
+	  max-width: 50%;
+	}
+}
+
+@media (max-width: 767px) {
+	.my-skills .col-md-4 {
+	  flex: 0 0 100%;
+	  max-width: 100%;
+	}
+}
+
+.skills-category h4 {
+	font-size: 1.3rem;
+	margin-bottom: 15px;
+	color: #656565;
+}
+
+@media (max-width: 767px) {
+	.skills-category h4 {
+	  font-size: 1.1rem;
+	  margin-bottom: 10px;
+	}
+  
+	.my-skills {
+	  padding: 50px 0 70px;
+	}
+}
+
+.my-skills .row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+  
+.my-skills .col-md-4 {
+	flex: 0 0 33.333%;
+	max-width: 33.333%;
+	padding: 15px;
+	text-align: center;
+}
+  
+.my-skills canvas {
+	max-width: 100%;
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+  
+.skill-details {
+	display: none;
+	margin-top: 40px;
+	text-align: left;
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+  
+.skill-details h4 {
+	font-size: 1.8rem;
+	margin-bottom: 10px;
+	color: #333;
+}
+  
+.skill-details p {
+	font-size: 1rem;
+	line-height: 1.5;
+	color: #555;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+/***************************************/
 /*****     Portfolio Section css    ****/
 /***************************************/
 
 .portfolio{
-	background: #151515;
+	background: #000000;
 	padding: 100px 0;
 }
 
@@ -703,22 +817,77 @@ header .navbar.sticky-header{
 .single-portfolio{
 	position: relative;
 	margin-bottom: 30px;
+	overflow: hidden;
 }
 
+@keyframes fadeInUp {
+	0% {
+	  opacity: 0;
+	  transform: translateY(20px);
+	}
+	100% {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
+}
+  
+@keyframes fadeOutDown {
+	0% {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
+	100% {
+	  opacity: 0;
+	  transform: translateY(20px);
+	}
+}
+
+.single-portfolio img {
+	width: 600px;
+	height: 300px;
+	object-fit: cover;
+	transition: transform 0.3s ease;
+}
+
+.single-portfolio:hover img {
+	transform: scale(1.05);
+}
+
+.Portfolio-Image {
+	border-radius: 20px;
+	height: 250px;
+}
 .single-portfolio-overlay {
 	position: absolute;
 	top: 10px;
 	left: 10px;
 	right: 10px;
 	bottom: 10px;
-	background: rgba(0, 0, 0, 0.426);
+	background: rgba(0, 0, 0, 0.8);
 	padding: 20px;
 	border-radius: 20px;
+	color: #ffffff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	text-align: center;
 }
 
 .single-portfolio-overlay h2, .single-portfolio-overlay h3 {
 	opacity: 1;
-	transition: none;
+}
+
+.single-portfolio:hover .single-portfolio-overlay,
+.single-portfolio:focus .single-portfolio-overlay {
+	animation: fadeInUp 0.5s forwards ease-out;
+    pointer-events: auto;
+}
+
+.single-portfolio:not(:hover):not(:focus) .single-portfolio-overlay {
+	animation: fadeOutDown 0.5s forwards ease-in;
 }
 
 .single-portfolio-overlay h2 {
@@ -734,6 +903,15 @@ header .navbar.sticky-header{
 	color: #ff5d56;
 }
 
+@media (max-width: 768px) {
+	.single-portfolio-overlay h2 {
+	  font-size: 20px;
+	}
+  
+	.single-portfolio-overlay h3 {
+	  font-size: 16px;
+	}
+}
 
 .mfp-content{
 	background: #222;
@@ -830,7 +1008,7 @@ header .navbar.sticky-header{
 
 .team-info{
 	position: absolute;
-	background: #222;
+	background: #000000;
 	border: 1px solid #333;
 	left: 30px;
 	right: 30px;
@@ -890,7 +1068,7 @@ header .navbar.sticky-header{
 
 .pricing{
 	padding: 100px 0;
-	background: #151515;
+	background: #000000;
 }
 
 .pricing-single{
@@ -1041,7 +1219,7 @@ header .navbar.sticky-header{
 	width: 60px;
 	margin-left: -30px;
 	height: 3px;
-	background: #333;
+	background: #000000;
 	position: absolute;
 	left: 50%;
 	bottom: 0;
@@ -1117,7 +1295,7 @@ header .navbar.sticky-header{
 /*******************************************/
 
 .newsletter{
-	background: #151515;
+	background: #000000;
 	padding: 80px 0;
 }
 
@@ -1192,7 +1370,7 @@ header .navbar.sticky-header{
 }
 
 .blog-single{
-	background: #222;
+	background: #000000;
 	border: 1px solid #333;
 }
 
@@ -1292,7 +1470,7 @@ header .navbar.sticky-header{
 
 .brand-sponser{
 	padding: 60px 0;
-	background: #111;
+	background: #000000;
 }
 
 .brand-slide{
@@ -1308,6 +1486,10 @@ header .navbar.sticky-header{
 .brand-slide:hover img{
 	opacity: 1;
 }
+  
+.brand-slider .swiper-slide {
+	width: calc(100% / 4);
+}
 
 /************************************/
 /*****       Contact us css      ****/
@@ -1318,7 +1500,7 @@ header .navbar.sticky-header{
 }
 
 .contact-form .form-control{
-	background: #222;
+	background: #000000;
 	border: none;
 	border-radius: 0;
 	height: auto;
@@ -1352,14 +1534,14 @@ header .navbar.sticky-header{
 /*****************************************/
 
 .contact-information{
-	background: linear-gradient(#111111 50%,#151515 50%);
+	background: linear-gradient(#000000 50%,#000000 50%);
 }
 
 .contact-info-single{
-	background: #222;
+	background: #000000;
 	padding: 20px;
 	text-align: center;
-	border: 1px solid #333;
+	border: 1px solid #000000;
 	position: relative;
 }
 
@@ -1430,7 +1612,7 @@ header .navbar.sticky-header{
 
 .main-footer{
 	padding: 100px 0;
-	background: #151515;
+	background: #000000;
 }
 
 .footer-logo{
@@ -1469,7 +1651,7 @@ header .navbar.sticky-header{
 	width: 60px;
 	height: 60px;
 	font-size: 22px;
-	background: #222;
+	background: #000000;
 	line-height: 60px;
 	color: #707070;
 	border-radius: 50%;
@@ -1479,6 +1661,30 @@ header .navbar.sticky-header{
 }
 
 .footer-social a:hover{
+	background: none;
+	border-color: #ff5d56;
+	color: #ff5d56;
+}
+
+.main-social{
+	text-align: center;
+	margin-top:40px;
+}
+
+.main-social a{
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	font-size: 30px;
+	background: #000000;
+	line-height: 60px;
+	color: #707070;
+	border-radius: 50%;
+	margin: 0 6px;
+	transition: all 0.5s;
+}
+
+.main-social a:hover{
 	background: none;
 	border-color: #ff5d56;
 	color: #ff5d56;
@@ -1606,6 +1812,15 @@ header .navbar.sticky-header{
 	.contact-info-single{
 		margin-bottom: 30px;
 	}
+	.skills-section.expanded {
+		flex-direction: column;
+	}
+	
+	.skills-section.expanded #skillsChart,
+
+	.skills-section.expanded .skill-details {
+		max-width: 100%;
+	}
 }
 
 @media only screen and (max-width: 767px){
@@ -1619,7 +1834,7 @@ header .navbar.sticky-header{
 	}
 	
 	.banner-content h2{
-		font-size: 16px;
+		font-size: 2.5rem;
 	}
 	
 	.banner-content h2 span{
@@ -1627,7 +1842,7 @@ header .navbar.sticky-header{
 	}
 	
 	.banner-content p{
-		font-size: 16px;
+		font-size: 1.2rem;
 	}
 	
 	.about-content h3{
@@ -1731,3 +1946,14 @@ header .navbar.sticky-header{
 		margin-top: 0;
 	}
 }
+@keyframes slideDown {
+	0% {
+	  opacity: 0;
+	  transform: translateY(-100%);
+	}
+	100% {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
+  }
+  

@@ -37,23 +37,40 @@
 	/* Brand slider */
 	var swiper = new Swiper('.brand-slider',{
 		autoplay: {
-			delay: 3000,
+			delay: 0,
+			disableOnInteraction: false,
 		},
-		speed: 1000,
+		speed: 3000,
 		loop: true,
 		slidesPerView: 4,
-		spaceBetween: 30,
+		spaceBetween: 0,
+		freeMode: true,          
+  		freeModeMomentum: false,
 		breakpoints: {
 			991: {
 				slidesPerView: 2
 			}
-		}
+		},
+		allowTouchMove: false,
     });
+
+	// Get the slider container
+	var sliderContainer = document.querySelector('.brand-slider');
+
+	// Pause on mouse enter
+	sliderContainer.addEventListener('mouseenter', function() {
+		sliderContainer.swiper.autoplay.stop();
+	});
+
+	// Resume on mouse leave
+	sliderContainer.addEventListener('mouseleave', function() {
+		sliderContainer.swiper.autoplay.start();
+	});
 
 	/* Experience slider */
 	var swiper = new Swiper('.experience-slider',{
 		autoplay: {
-			delay: 3000,
+			delay: 2500,
 		},
 		speed: 1000,
 		loop: true,
@@ -66,10 +83,23 @@
 		},
     });
 	
+	// Get the slider container
+	var expContainer = document.querySelector('.experience-slider');
+
+	// Pause on mouse enter
+	expContainer.addEventListener('mouseenter', function() {
+		expContainer.swiper.autoplay.stop();
+	});
+
+	// Resume on mouse leave
+	expContainer.addEventListener('mouseleave', function() {
+		expContainer.swiper.autoplay.start();
+	});
+
 	/* Education slider */
 	var swiper = new Swiper('.education-slider',{
 		autoplay: {
-			delay: 3000,
+			delay: 2500,
 		},
 		speed: 1000,
 		loop: true,
@@ -81,6 +111,18 @@
 			clickable: true,
 		},
     });
+
+	var eduContainer = document.querySelector('.education-slider');
+
+	// Pause on mouse enter
+	eduContainer.addEventListener('mouseenter', function() {
+		eduContainer.swiper.autoplay.stop();
+	});
+
+	// Resume on mouse leave
+	eduContainer.addEventListener('mouseleave', function() {
+		eduContainer.swiper.autoplay.start();
+	});
 	
 	/* Testimonial slider */
 	var swiper = new Swiper('.testimonial-slider',{
