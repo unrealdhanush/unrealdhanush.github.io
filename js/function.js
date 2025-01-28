@@ -81,6 +81,7 @@
 			type: 'bullets',
 			clickable: true,
 		},
+		autoHeight: true,
     });
 	
 	// Get the slider container

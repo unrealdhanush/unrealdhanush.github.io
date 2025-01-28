@@ -579,6 +579,8 @@ header .navbar.sticky-header{
 	padding: 40px 30px;
 	margin-top: 30px;
 	position: relative;
+	height: 600px;
+	overflow: auto;
 }
 
 .experience-single:before{
@@ -626,7 +628,7 @@ header .navbar.sticky-header{
 .education-pagination .swiper-pagination-bullet{
 	width: 12px;
 	height: 12px;
-	border: 2px solid #222;
+	border: 2px solid #555555;
 	opacity: 1;
 	background: none;
 	transition: all 0.4s;
