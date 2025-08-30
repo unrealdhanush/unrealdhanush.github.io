@@ -56,6 +56,23 @@
   ]
 }
 </script>
+<style>
+      .skip-link {
+        position: absolute;
+        left: -9999px; top: auto;
+        width: 1px; height: 1px;
+        overflow: hidden;
+      }
+      .skip-link:focus {
+        position: fixed;
+        left: 1rem; top: 1rem;
+        width: auto; height: auto;
+        padding: .5rem 1rem;
+        background: #000; color: #fff;
+        z-index: 10000;
+        border-radius: .25rem;
+      }
+    </style>
 </head>
 <body data-spy="scroll" data-target="#main-navbar" data-offset="75">
 <a class="skip-link" href="#main-content">Skip to content</a>
@@ -96,7 +113,8 @@
 			</div>
 		</nav>	
 	</header>
-	<!-- Header Section End -->
+<div id="main-content"></div>
+<!-- Header Section End -->
 	
 	<!-- Banner Slider Section starts -->
 	<div class="banner" id="home">
@@ -150,7 +168,7 @@
 				<div class="col-lg-4">
 					<!-- About image start -->
 					<div class="about-image wow fadeInLeft" data-wow-delay="0.5s">
-						<img src="images/about.jpg" alt="" / loading="lazy" decoding="async">
+						<img src="images/about.jpg" alt="" loading="lazy" decoding="async" />
 					</div>
 					<!-- About image end -->
 				</div>
@@ -306,7 +324,7 @@
 								<!-- Experience Slide start -->
 								<div class="swiper-slide swiper-slide-duplicate-next" data-swiper-slide-index="0" style="width: 510px; margin-right: 30px;">
 									<div class="experience-single">
-										<img src="images/PayPal_logo.png" alt="Logo" style="width: 50px; height: 50px; border-radius: 50%; margin-bottom: 10px; margin-left: 0;" / loading="lazy" decoding="async">
+										<img src="images/PayPal_logo.png" alt="Logo" style="width: 50px; height: 50px; border-radius: 50%; margin-bottom: 10px; margin-left: 0;" loading="lazy" decoding="async" />
 										<h5>2024</h5>
 										<i>
 										<h4>Machine Learning Software Engineer</h4>
@@ -321,7 +339,7 @@
 								</div>
 								<div class="swiper-slide swiper-slide-duplicate-next" data-swiper-slide-index="0" style="width: 510px; margin-right: 30px;">
 									<div class="experience-single">
-										<img src="images/EAI_logo.png" alt="Logo" style="width: 50px; height: 50px; border-radius: 50%; margin-bottom: 10px; margin-left: 0;" / loading="lazy" decoding="async">
+										<img src="images/EAI_logo.png" alt="Logo" style="width: 50px; height: 50px; border-radius: 50%; margin-bottom: 10px; margin-left: 0;" loading="lazy" decoding="async" />
 										<h5>2024</h5>
 										<i>
 										<h4>Machine Learning Research Engineer - CV</h4>
@@ -336,7 +354,7 @@
 								</div>
 								<div class="swiper-slide swiper-slide-duplicate-next" data-swiper-slide-index="0" style="width: 510px; margin-right: 30px;">
 									<div class="experience-single">
-										<img src="images/solbid_logo.png" alt="Logo" style="width: 50px; height: 50px; border-radius: 50%; margin-bottom: 10px; margin-left: 0;" / loading="lazy" decoding="async">
+										<img src="images/solbid_logo.png" alt="Logo" style="width: 50px; height: 50px; border-radius: 50%; margin-bottom: 10px; margin-left: 0;" loading="lazy" decoding="async" />
 										<h5>2024</h5>
 										<i>
 										<h4>AI/ML Engineer</h4>
@@ -351,7 +369,7 @@
 								</div>
 								<div class="swiper-slide swiper-slide-active" data-swiper-slide-index="2" style="width: 510px; margin-right: 30px;">
 									<div class="experience-single">
-										<img src="images/BA_logo.png" alt="Logo" style="width: 50px; height: 50px; border-radius: 50%; margin-bottom: 10px; margin-left: 0;" / loading="lazy" decoding="async">
+										<img src="images/BA_logo.png" alt="Logo" style="width: 50px; height: 50px; border-radius: 50%; margin-bottom: 10px; margin-left: 0;" loading="lazy" decoding="async" />
 										<h5>2023</h5>
 										<i>
 										<h4>Data Science Intern</h4>
@@ -366,7 +384,7 @@
 								</div>
 								<div class="swiper-slide swiper-slide-active" data-swiper-slide-index="2" style="width: 510px; margin-right: 30px;">
 									<div class="experience-single">
-										<img src="images/sandlogic_logo.png" alt="Logo" style="width: 50px; height: 50px; border-radius: 50%; margin-bottom: 10px; margin-left: 0;" / loading="lazy" decoding="async">
+										<img src="images/sandlogic_logo.png" alt="Logo" style="width: 50px; height: 50px; border-radius: 50%; margin-bottom: 10px; margin-left: 0;" loading="lazy" decoding="async" />
 										<h5>2021</h5>
 										<i>
 										<h4>Machine Learning Research Engineer</h4>
@@ -401,7 +419,7 @@
 								<!-- Experience Slide start -->
 								<div class="swiper-slide swiper-slide-duplicate-active" data-swiper-slide-index="0" style="width: 510px; margin-right: 30px;">
 									<div class="experience-single">
-										<img src="images/neu_logo.png" alt="Logo" style="width: 50px; height: 50px; border-radius: 50%; margin-bottom: 10px; margin-left: 0;" / loading="lazy" decoding="async">
+										<img src="images/neu_logo.png" alt="Logo" style="width: 50px; height: 50px; border-radius: 50%; margin-bottom: 10px; margin-left: 0;" loading="lazy" decoding="async" />
 										<h5>2022 - 2024</h5>
 										<i>
 										<h4>Master of Science in Electrical and Computer Engineering - Concentration: ML, CV & Algorithms </h4>
@@ -417,7 +435,7 @@
 								<!-- Experience Slide start -->
 								<div class="swiper-slide swiper-slide-prev swiper-slide-duplicate-next" data-swiper-slide-index="1" style="width: 510px; margin-right: 30px;">
 									<div class="experience-single">
-										<img src="images/vtu_logo.png" alt="Logo" style="width: 50px; height: 50px; border-radius: 50%; margin-bottom: 10px; margin-left: 0;" / loading="lazy" decoding="async">
+										<img src="images/vtu_logo.png" alt="Logo" style="width: 50px; height: 50px; border-radius: 50%; margin-bottom: 10px; margin-left: 0;" loading="lazy" decoding="async" />
 										<h5>2018 - 2022</h5>
 										<i>
 										<h4>Bachelor of Engineering in Electronics and Communication</h4>
@@ -505,7 +523,7 @@
 				<div class="col-md-3 col-sm-6 col-xs-12 portfolio-box cv">
 					<div class="single-portfolio">
 						<a href="#popup-1" class="has-popup">
-							<img src="images/CV.gif" class="Portfolio-Image" alt="" / loading="lazy" decoding="async">
+							<img src="images/CV.gif" class="Portfolio-Image" alt="" loading="lazy" decoding="async" />
 							<div class="single-portfolio-overlay">
 								<h2>Domain Adaptation</h2>
 								<h3>Computer Vision</h3>
@@ -515,7 +533,7 @@
 					<div id="popup-1" class="popup-box mfp-fade mfp-hide">
 						<div class="content">
 							<div class="image">
-								<img src="images/CV.gif" class="Portfolio-Image" alt="" loading="lazy" decoding="async">
+								<img src="images/CV.gif" class="Portfolio-Image" alt="" loading="lazy" decoding="async" />
 							</div>
 							<div class="desc">
 								<h4>Domain Adaptation</h4>
@@ -534,7 +552,7 @@
 				<div class="col-md-3 col-sm-6 col-xs-12 portfolio-box cv">
 					<div class="single-portfolio">
 						<a href="#popup-2" class="has-popup">
-							<img src="images/CV.gif" class="Portfolio-Image" alt="" / loading="lazy" decoding="async">
+							<img src="images/CV.gif" class="Portfolio-Image" alt="" loading="lazy" decoding="async" />
 							<div class="single-portfolio-overlay">
 								<h2>Motion Detection using Simple Image Filtering</h2>
 								<h3>Computer Vision</h3>
@@ -544,7 +562,7 @@
 					<div id="popup-2" class="popup-box mfp-fade mfp-hide">
 						<div class="content">
 							<div class="image">
-								<img src="images/CV.gif" class="Portfolio-Image" alt="" loading="lazy" decoding="async">
+								<img src="images/CV.gif" class="Portfolio-Image" alt="" loading="lazy" decoding="async" />
 							</div>
 							<div class="desc">
 								<h4>Motion Detection using Simple Image Filtering</h4>
@@ -563,7 +581,7 @@
 				<div class="col-md-3 col-sm-6 col-xs-12 portfolio-box nlp">
 					<div class="single-portfolio">
 						<a href="#popup-3" class="has-popup">
-							<img src="images/NLP.gif" class="Portfolio-Image" alt="" / loading="lazy" decoding="async">
+							<img src="images/NLP.gif" class="Portfolio-Image" alt="" loading="lazy" decoding="async" />
 							<div class="single-portfolio-overlay">
 								<h2>Neural Machine Translation</h2>
 								<h3>NLP</h3>
@@ -573,7 +591,7 @@
 					<div id="popup-3" class="popup-box mfp-fade mfp-hide">
 						<div class="content">
 							<div class="image">
-								<img src="images/NLP.gif" class="Portfolio-Image" alt="" loading="lazy" decoding="async">
+								<img src="images/NLP.gif" class="Portfolio-Image" alt="" loading="lazy" decoding="async" />
 							</div>
 							<div class="desc">
 								<h4>Neural Machine Translation</h4>
@@ -592,7 +610,7 @@
 				<div class="col-md-3 col-sm-6 col-xs-12 portfolio-box others">
 					<div class="single-portfolio">
 						<a href="#popup-4" class="has-popup">
-							<img src="images/Others.gif" class="Portfolio-Image" alt="" / loading="lazy" decoding="async">
+							<img src="images/Others.gif" class="Portfolio-Image" alt="" loading="lazy" decoding="async" />
 							<div class="single-portfolio-overlay">
 								<h2>Personal Portfolio</h2>
 								<h3>Others</h3>
@@ -602,7 +620,7 @@
 					<div id="popup-4" class="popup-box mfp-fade mfp-hide">
 						<div class="content">
 							<div class="image">
-								<img src="images/Others.gif" class="Portfolio-Image" alt="" loading="lazy" decoding="async">
+								<img src="images/Others.gif" class="Portfolio-Image" alt="" loading="lazy" decoding="async" />
 							</div>
 							<div class="desc">
 								<h4>Personal Portfolio</h4>
@@ -621,7 +639,7 @@
 				<div class="col-md-3 col-sm-6 col-xs-12 portfolio-box cv">
 					<div class="single-portfolio">
 						<a href="#popup-5" class="has-popup">
-							<img src="images/CV.gif" class="Portfolio-Image" alt="" / loading="lazy" decoding="async">
+							<img src="images/CV.gif" class="Portfolio-Image" alt="" loading="lazy" decoding="async" />
 							<div class="single-portfolio-overlay">
 								<h2>Stereo Vision</h2>
 								<h3>Computer Vision</h3>
@@ -631,7 +649,7 @@
 					<div id="popup-5" class="popup-box mfp-fade mfp-hide">
 						<div class="content">
 							<div class="image">
-								<img src="images/CV.gif" class="Portfolio-Image" alt="" loading="lazy" decoding="async">
+								<img src="images/CV.gif" class="Portfolio-Image" alt="" loading="lazy" decoding="async" />
 							</div>
 							<div class="desc">
 								<h4>Stereo Vision</h4>
@@ -650,7 +668,7 @@
 				<div class="col-md-3 col-sm-6 col-xs-12 portfolio-box others">
 					<div class="single-portfolio">
 						<a href="#popup-6" class="has-popup">
-							<img src="images/Others.gif" class="Portfolio-Image" alt="" / loading="lazy" decoding="async">
+							<img src="images/Others.gif" class="Portfolio-Image" alt="" loading="lazy" decoding="async" />
 							<div class="single-portfolio-overlay">
 								<h2>Basic Voice Assistant</h2>
 								<h3>Others</h3>
@@ -660,7 +678,7 @@
 					<div id="popup-6" class="popup-box mfp-fade mfp-hide">
 						<div class="content">
 							<div class="image">
-								<img src="images/Others.gif" class="Portfolio-Image" alt="" loading="lazy" decoding="async">
+								<img src="images/Others.gif" class="Portfolio-Image" alt="" loading="lazy" decoding="async" />
 							</div>
 							<div class="desc">
 								<h4>Basic Voice Assistant</h4>
@@ -679,7 +697,7 @@
 				<div class="col-md-3 col-sm-6 col-xs-12 portfolio-box others">
 					<div class="single-portfolio">
 						<a href="#popup-7" class="has-popup">
-							<img src="images/Others.gif" class="Portfolio-Image" alt="" / loading="lazy" decoding="async">
+							<img src="images/Others.gif" class="Portfolio-Image" alt="" loading="lazy" decoding="async" />
 							<div class="single-portfolio-overlay">
 								<h2>Task Scheduler Algorithm</h2>
 								<h3>Others</h3>
@@ -689,7 +707,7 @@
 					<div id="popup-7" class="popup-box mfp-fade mfp-hide">
 						<div class="content">
 							<div class="image">
-								<img src="images/Others.gif" class="Portfolio-Image" alt="" loading="lazy" decoding="async">
+								<img src="images/Others.gif" class="Portfolio-Image" alt="" loading="lazy" decoding="async" />
 							</div>
 							<div class="desc">
 								<h4>Task Scheduler Algorithm</h4>
@@ -708,7 +726,7 @@
 				<div class="col-md-3 col-sm-6 col-xs-12 portfolio-box nlp">
 					<div class="single-portfolio">
 						<a href="#popup-8" class="has-popup">
-							<img src="images/NLP.gif" class="Portfolio-Image" alt="" / loading="lazy" decoding="async">
+							<img src="images/NLP.gif" class="Portfolio-Image" alt="" loading="lazy" decoding="async" />
 							<div class="single-portfolio-overlay">
 								<h2>Personal Assistant Chatbot</h2>
 								<h3>NLP</h3>
@@ -718,7 +736,7 @@
 					<div id="popup-8" class="popup-box mfp-fade mfp-hide">
 						<div class="content">
 							<div class="image">
-								<img src="images/NLP.gif" class="Portfolio-Image" alt="" loading="lazy" decoding="async">
+								<img src="images/NLP.gif" class="Portfolio-Image" alt="" loading="lazy" decoding="async" />
 							</div>
 							<div class="desc">
 								<h4>Personal Assistant Chatbot</h4>
@@ -737,7 +755,7 @@
 				<div class="col-md-3 col-sm-6 col-xs-12 portfolio-box dl">
 					<div class="single-portfolio">
 						<a href="#popup-9" class="has-popup">
-							<img src="images/DL.gif" class="Portfolio-Image" alt="" / loading="lazy" decoding="async">
+							<img src="images/DL.gif" class="Portfolio-Image" alt="" loading="lazy" decoding="async" />
 							<div class="single-portfolio-overlay">
 								<h2>FlappyBird Reinforcement Learning</h2>
 								<h3>Deep Learning</h3>
@@ -747,7 +765,7 @@
 					<div id="popup-9" class="popup-box mfp-fade mfp-hide">
 						<div class="content">
 							<div class="image">
-								<img src="images/DL.gif" class="Portfolio-Image" alt="" loading="lazy" decoding="async">
+								<img src="images/DL.gif" class="Portfolio-Image" alt="" loading="lazy" decoding="async" />
 							</div>
 							<div class="desc">
 								<h4>FlappyBird Reinforcement Learning</h4>
@@ -766,7 +784,7 @@
 				<div class="col-md-3 col-sm-6 col-xs-12 portfolio-box nlp">
 					<div class="single-portfolio">
 						<a href="#popup-10" class="has-popup">
-							<img src="images/NLP.gif" class="Portfolio-Image" alt="" / loading="lazy" decoding="async">
+							<img src="images/NLP.gif" class="Portfolio-Image" alt="" loading="lazy" decoding="async" />
 							<div class="single-portfolio-overlay">
 								<h2>G.R.O.O.T (Guided Readmission & Orchestrated Observation Text)</h2>
 								<h3>NLP</h3>
@@ -776,7 +794,7 @@
 					<div id="popup-10" class="popup-box mfp-fade mfp-hide">
 						<div class="content">
 							<div class="image">
-								<img src="images/NLP.gif" class="Portfolio-Image" alt="" loading="lazy" decoding="async">
+								<img src="images/NLP.gif" class="Portfolio-Image" alt="" loading="lazy" decoding="async" />
 							</div>
 							<div class="desc">
 								<h4>G.R.O.O.T (Guided Readmission & Orchestrated Observation Text)</h4>
@@ -806,7 +824,7 @@
 							<!-- Brand slide start -->
 							<div class="swiper-slide">
 								<div class="brand-slide">
-									<img src="images/python-icon.png" alt="" / loading="lazy" decoding="async">
+									<img src="images/python-icon.png" alt="" loading="lazy" decoding="async" />
 								</div>
 							</div>
 							<!-- Brand slide end -->
@@ -814,7 +832,7 @@
 							<!-- Brand slide start -->
 							<div class="swiper-slide">
 								<div class="brand-slide">
-									<img src="images/tensorflow-icon.png" alt="" / loading="lazy" decoding="async">
+									<img src="images/tensorflow-icon.png" alt="" loading="lazy" decoding="async" />
 								</div>
 							</div>
 							<!-- Brand slide end -->
@@ -822,7 +840,7 @@
 							<!-- Brand slide start -->
 							<div class="swiper-slide">
 								<div class="brand-slide">
-									<img src="images/pytorch-icon.png" alt="" / loading="lazy" decoding="async">
+									<img src="images/pytorch-icon.png" alt="" loading="lazy" decoding="async" />
 								</div>
 							</div>
 							<!-- Logo slide end -->
@@ -830,7 +848,7 @@
 							<!-- Logo slide start -->
 							<div class="swiper-slide">
 								<div class="brand-slide">
-									<img src="images/aws-icon.png" alt="" / loading="lazy" decoding="async">
+									<img src="images/aws-icon.png" alt="" loading="lazy" decoding="async" />
 								</div>
 							</div>
 							<!-- Logo slide end -->
@@ -838,7 +856,7 @@
 							<!-- Logo slide start -->
 							<div class="swiper-slide">
 								<div class="brand-slide">
-									<img src="images/mysql-icon.png" alt="" / loading="lazy" decoding="async">
+									<img src="images/mysql-icon.png" alt="" loading="lazy" decoding="async" />
 								</div>
 							</div>
 							<!-- Logo slide end -->
@@ -846,7 +864,7 @@
 							<!-- Logo slide start -->
 							<div class="swiper-slide">
 								<div class="brand-slide">
-									<img src="images/r-icon.png" alt="" / loading="lazy" decoding="async">
+									<img src="images/r-icon.png" alt="" loading="lazy" decoding="async" />
 								</div>
 							</div>
 							<!-- Logo slide end -->
@@ -854,7 +872,7 @@
 							<!-- Logo slide start -->
 							<div class="swiper-slide">
 								<div class="brand-slide">
-									<img src="images/jquery-icon.png" alt="" / loading="lazy" decoding="async">
+									<img src="images/jquery-icon.png" alt="" loading="lazy" decoding="async" />
 								</div>
 							</div>
 							<!-- Logo slide end -->
@@ -862,7 +880,7 @@
 							<!-- Logo slide start -->
 							<div class="swiper-slide">
 								<div class="brand-slide">
-									<img src="images/laravel-icon.png" alt="" / loading="lazy" decoding="async">
+									<img src="images/laravel-icon.png" alt="" loading="lazy" decoding="async" />
 								</div>
 							</div>
 							<!-- Logo slide end -->
@@ -870,7 +888,7 @@
 							<!-- Logo slide start -->
 							<div class="swiper-slide">
 								<div class="brand-slide">
-									<img src="images/pg-icon.png" alt="" / loading="lazy" decoding="async">
+									<img src="images/pg-icon.png" alt="" loading="lazy" decoding="async" />
 								</div>
 							</div>
 							<!-- Logo slide end -->
@@ -878,7 +896,7 @@
 							<!-- Logo slide start -->
 							<div class="swiper-slide">
 								<div class="brand-slide">
-									<img src="images/opencv-icon.png" alt="" / loading="lazy" decoding="async">
+									<img src="images/opencv-icon.png" alt="" loading="lazy" decoding="async" />
 								</div>
 							</div>
 							<!-- Logo slide end -->
@@ -1081,5 +1099,45 @@
 		});
 	</script>
 	
+<script>
+(function () {
+  function initJq() {
+    if (window.jQuery && typeof jQuery.fn.animatedHeadline === 'function') {
+      jQuery(function ($) {
+        if ($('.cd-headline').length) {
+          $('.cd-headline').animatedHeadline({
+            animationType: 'type',
+            animationDelay: 2500,
+            typeLettersDelay: 80,
+            selectionDuration: 500,
+            revealDuration: 600,
+            revealAnimationDelay: 1500
+          });
+        }
+      });
+      return true;
+    }
+    return false;
+  }
+  function initVanilla() {
+    if (window.AnimatedHeadline && document.querySelectorAll('.cd-headline').length) {
+      document.querySelectorAll('.cd-headline').forEach(function (node) {
+        new AnimatedHeadline(node, { animationType: 'type' });
+      });
+      return true;
+    }
+    return false;
+  }
+  function tryInit() {
+    if (initJq() || initVanilla()) return;
+    setTimeout(tryInit, 50);
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', tryInit);
+  } else {
+    tryInit();
+  }
+})();
+</script>
 </body>
 </html>
